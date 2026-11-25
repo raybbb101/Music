@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Air Strings</title>
+  <meta name="description" content="Pinch with both hands to draw strings in the air, then swipe to play them like a guitar." />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="stage">
+    <video id="video" playsinline muted></video>
+    <canvas id="canvas"></canvas>
+
+    <section id="intro">
+      <h1>Air Strings</h1>
+      <p>Draw strings in the air with your hands and play them like a guitar.</p>
+      <ol>
+        <li><b>Pinch</b> thumb + index on <b>both hands</b> — a line stretches between them.</li>
+        <li><b>Release</b> — the string stays. Short = low note, long = high note.</li>
+        <li><b>Swipe</b> your index finger across a string to pluck it.</li>
+      </ol>
+      <button id="startBtn">Open camera &amp; start</button>
+      <p id="status" role="status"></p>
+    </section>
+
+    <div id="toolbar" hidden>
+      <button id="undoBtn" title="Remove last string">Undo</button>
+      <button id="clearBtn" title="Remove all strings">Clear</button>
+      <button id="installBtn" hidden>Install app</button>
+    </div>
+    <div id="hint" hidden></div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
